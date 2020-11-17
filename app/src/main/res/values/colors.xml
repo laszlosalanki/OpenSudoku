@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="colorNewGame">#66B2FF</color>
+    <color name="white">#FFF</color>
+
+    <color name="first_section_color">#FFCCCC</color>
+    <color name="second_section_color">#FFE5CC</color>
+    <color name="third_section_color">#FFFFCC</color>
+    <color name="fourth_section_color">#E5FFCC</color>
+    <color name="fifth_section_color">#CCFFCC</color>
+    <color name="sixth_section_color">#CCFFE5</color>
+    <color name="seventh_section_color">#CCFFFF</color>
+    <color name="eighth_section_color">#CCE5FF</color>
+    <color name="ninth_section_color">#CCCCFF</color>
+</resources>

@@ -1,0 +1,51 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="new_game_style">
+        <item name="backgroundTint">@color/colorNewGame</item>
+<!--        <item name="android:textColor">@color/white</item>-->
+    </style>
+
+    <style name="first_section_style">
+        <item name="backgroundTint">@color/first_section_color</item>
+    </style>
+
+    <style name="second_section_style">
+        <item name="backgroundTint">@color/second_section_color</item>
+    </style>
+
+    <style name="third_section_style">
+        <item name="backgroundTint">@color/third_section_color</item>
+    </style>
+
+    <style name="fourth_section_style">
+        <item name="backgroundTint">@color/fourth_section_color</item>
+    </style>
+
+    <style name="fifth_section_style">
+        <item name="backgroundTint">@color/fifth_section_color</item>
+    </style>
+
+    <style name="sixth_section_style">
+        <item name="backgroundTint">@color/sixth_section_color</item>
+    </style>
+
+    <style name="seventh_section_style">
+        <item name="backgroundTint">@color/seventh_section_color</item>
+    </style>
+
+    <style name="eighth_section_style">
+        <item name="backgroundTint">@color/eighth_section_color</item>
+    </style>
+
+    <style name="ninth_section_style">
+        <item name="backgroundTint">@color/ninth_section_color</item>
+    </style>
+
+</resources>
