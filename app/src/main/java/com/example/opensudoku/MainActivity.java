@@ -780,7 +780,7 @@ public class MainActivity extends AppCompatActivity {
         button_new_game.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TaskGenerator tg = new TaskGenerator();
+                TaskGenerator tg = new TaskGenerator(9, 20);
                 int[][] proba = tg.getLevel();
                 for (int i = 0; i < 9; ++i)
                     for(int j = 0; j < 9; ++j)
