@@ -61,10 +61,15 @@ public class PopupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 number_to_set = Integer.parseInt(editText.getText().toString());
-                Intent intent = getIntent();
-                intent.putExtra(Constant.INTENT_NUMBER_TO_SET, number_to_set);
-                setResult(RESULT_OK, intent);
-                finish();
+                if(number_to_set < 1 || number_to_set > 9) {
+                    Toast.makeText(PopupActivity.this, "A megadott számnak 1 és 9 közé kell esnie!", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Intent intent = getIntent();
+                    intent.putExtra(Constant.INTENT_NUMBER_TO_SET, number_to_set);
+                    setResult(RESULT_OK, intent);
+                    finish();
+                }
             }
         });
         button_cancel = findViewById(R.id.buttonPopupCancel);

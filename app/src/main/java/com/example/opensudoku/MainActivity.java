@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -32,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
     int id, number_to_set;
     public static final int RESULT_REQUEST = 1;
+    int[][] palya;
+    boolean firstGame = true;
 
     private static final String TAG = "MainActivity";
 
@@ -780,11 +784,905 @@ public class MainActivity extends AppCompatActivity {
         button_new_game.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TaskGenerator tg = new TaskGenerator(9, 20);
-                int[][] proba = tg.getLevel();
-                for (int i = 0; i < 9; ++i)
-                    for(int j = 0; j < 9; ++j)
-                        Log.d(TAG, "proba" + String.valueOf(proba[i][j]));
+
+                if (!firstGame)
+                    new AlertDialog.Builder(MainActivity.this)
+                            .setTitle("Új játék indítása")
+                            .setMessage("Biztosan új játékot akarsz kezdeni?")
+                            .setPositiveButton("Igen", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    TaskGenerator tg = new TaskGenerator(9, 20);
+                                    tg.init();
+                                    tg.fillValues();
+                                    palya = tg.getLevel();
+
+
+                                    button_1.setText("");
+                                    button_2.setText("");
+                                    button_3.setText("");
+                                    button_4.setText("");
+                                    button_5.setText("");
+                                    button_6.setText("");
+                                    button_7.setText("");
+                                    button_8.setText("");
+                                    button_9.setText("");
+                                    button_10.setText("");
+                                    button_11.setText("");
+                                    button_12.setText("");
+                                    button_13.setText("");
+                                    button_14.setText("");
+                                    button_15.setText("");
+                                    button_16.setText("");
+                                    button_17.setText("");
+                                    button_18.setText("");
+                                    button_19.setText("");
+                                    button_20.setText("");
+                                    button_21.setText("");
+                                    button_22.setText("");
+                                    button_23.setText("");
+                                    button_24.setText("");
+                                    button_25.setText("");
+                                    button_26.setText("");
+                                    button_27.setText("");
+                                    button_28.setText("");
+                                    button_29.setText("");
+                                    button_30.setText("");
+                                    button_31.setText("");
+                                    button_32.setText("");
+                                    button_33.setText("");
+                                    button_34.setText("");
+                                    button_35.setText("");
+                                    button_36.setText("");
+                                    button_37.setText("");
+                                    button_38.setText("");
+                                    button_39.setText("");
+                                    button_40.setText("");
+                                    button_41.setText("");
+                                    button_42.setText("");
+                                    button_43.setText("");
+                                    button_44.setText("");
+                                    button_45.setText("");
+                                    button_46.setText("");
+                                    button_47.setText("");
+                                    button_48.setText("");
+                                    button_49.setText("");
+                                    button_50.setText("");
+                                    button_51.setText("");
+                                    button_52.setText("");
+                                    button_53.setText("");
+                                    button_54.setText("");
+                                    button_55.setText("");
+                                    button_56.setText("");
+                                    button_57.setText("");
+                                    button_58.setText("");
+                                    button_59.setText("");
+                                    button_60.setText("");
+                                    button_61.setText("");
+                                    button_62.setText("");
+                                    button_63.setText("");
+                                    button_64.setText("");
+                                    button_65.setText("");
+                                    button_66.setText("");
+                                    button_67.setText("");
+                                    button_68.setText("");
+                                    button_69.setText("");
+                                    button_70.setText("");
+                                    button_71.setText("");
+                                    button_72.setText("");
+                                    button_73.setText("");
+                                    button_74.setText("");
+                                    button_75.setText("");
+                                    button_76.setText("");
+                                    button_77.setText("");
+                                    button_78.setText("");
+                                    button_79.setText("");
+                                    button_80.setText("");
+                                    button_81.setText("");
+
+
+                                    //Elso sor
+                                    if(palya[0][0] != 0) {
+                                        button_1.setText("");
+                                        button_1.setText(String.valueOf(palya[0][0]));
+                                    }
+
+                                    if(palya[0][1] != 0) {
+                                        button_2.setText("");
+                                        button_2.setText(String.valueOf(palya[0][1]));
+                                    }
+
+                                    if(palya[0][2] != 0) {
+                                        button_3.setText("");
+                                        button_3.setText(String.valueOf(palya[0][2]));
+                                    }
+
+                                    if(palya[0][3] != 0) {
+                                        button_4.setText("");
+                                        button_4.setText(String.valueOf(palya[0][3]));
+                                    }
+
+                                    if(palya[0][4] != 0) {
+                                        button_5.setText("");
+                                        button_5.setText(String.valueOf(palya[0][4]));
+                                    }
+
+                                    if(palya[0][5] != 0) {
+                                        button_6.setText("");
+                                        button_6.setText(String.valueOf(palya[0][5]));
+                                    }
+
+                                    if(palya[0][6] != 0) {
+                                        button_7.setText("");
+                                        button_7.setText(String.valueOf(palya[0][6]));
+                                    }
+
+                                    if(palya[0][7] != 0) {
+                                        button_8.setText("");
+                                        button_8.setText(String.valueOf(palya[0][7]));
+                                    }
+
+                                    if(palya[0][8] != 0) {
+                                        button_9.setText("");
+                                        button_9.setText(String.valueOf(palya[0][8]));
+                                    }
+
+                                    //Masodik sor
+                                    if(palya[1][0] != 0) {
+                                        button_10.setText("");
+                                        button_10.setText(String.valueOf(palya[1][0]));
+                                    }
+                                    if(palya[1][1] != 0) {
+                                        button_11.setText("");
+                                        button_11.setText(String.valueOf(palya[1][1]));
+                                    }
+                                    if(palya[1][2] != 0) {
+                                        button_12.setText("");
+                                        button_12.setText(String.valueOf(palya[1][2]));
+                                    }
+                                    if(palya[1][3] != 0) {
+                                        button_13.setText("");
+                                        button_13.setText(String.valueOf(palya[1][3]));
+                                    }
+                                    if(palya[1][4] != 0) {
+                                        button_14.setText("");
+                                        button_14.setText(String.valueOf(palya[1][4]));
+                                    }
+                                    if(palya[1][5] != 0) {
+                                        button_15.setText("");
+                                        button_15.setText(String.valueOf(palya[1][5]));
+                                    }
+                                    if(palya[1][6] != 0) {
+                                        button_16.setText("");
+                                        button_16.setText(String.valueOf(palya[1][6]));
+                                    }
+                                    if(palya[1][7] != 0) {
+                                        button_17.setText("");
+                                        button_17.setText(String.valueOf(palya[1][7]));
+                                    }
+                                    if(palya[1][8] != 0) {
+                                        button_18.setText("");
+                                        button_18.setText(String.valueOf(palya[1][8]));
+                                    }
+
+                                    //Harmadik sor
+                                    if(palya[2][0] != 0) {
+                                        button_19.setText("");
+                                        button_19.setText(String.valueOf(palya[2][0]));
+                                    }
+                                    if(palya[2][1] != 0) {
+                                        button_20.setText("");
+                                        button_20.setText(String.valueOf(palya[2][1]));
+                                    }
+                                    if(palya[2][2] != 0) {
+                                        button_21.setText("");
+                                        button_21.setText(String.valueOf(palya[2][2]));
+                                    }
+                                    if(palya[2][3] != 0) {
+                                        button_22.setText("");
+                                        button_22.setText(String.valueOf(palya[2][3]));
+                                    }
+                                    if(palya[2][4] != 0) {
+                                        button_23.setText("");
+                                        button_23.setText(String.valueOf(palya[2][4]));
+                                    }
+                                    if(palya[2][5] != 0) {
+                                        button_24.setText("");
+                                        button_24.setText(String.valueOf(palya[2][5]));
+                                    }
+                                    if(palya[2][6] != 0) {
+                                        button_25.setText("");
+                                        button_25.setText(String.valueOf(palya[2][6]));
+                                    }
+                                    if(palya[2][7] != 0) {
+                                        button_26.setText("");
+                                        button_26.setText(String.valueOf(palya[2][7]));
+                                    }
+                                    if(palya[2][8] != 0) {
+                                        button_27.setText("");
+                                        button_27.setText(String.valueOf(palya[2][8]));
+                                    }
+
+                                    //Negyedik sor
+                                    if(palya[3][0] != 0) {
+                                        button_28.setText("");
+                                        button_28.setText(String.valueOf(palya[3][0]));
+                                    }
+                                    if(palya[3][1] != 0) {
+                                        button_29.setText("");
+                                        button_29.setText(String.valueOf(palya[3][1]));
+                                    }
+                                    if(palya[3][2] != 0) {
+                                        button_30.setText("");
+                                        button_30.setText(String.valueOf(palya[3][2]));
+                                    }
+                                    if(palya[3][3] != 0) {
+                                        button_31.setText("");
+                                        button_31.setText(String.valueOf(palya[3][3]));
+                                    }
+                                    if(palya[3][4] != 0) {
+                                        button_32.setText("");
+                                        button_32.setText(String.valueOf(palya[3][4]));
+                                    }
+                                    if(palya[3][5] != 0) {
+                                        button_33.setText("");
+                                        button_33.setText(String.valueOf(palya[3][5]));
+                                    }
+                                    if(palya[3][6] != 0) {
+                                        button_34.setText("");
+                                        button_34.setText(String.valueOf(palya[3][6]));
+                                    }
+                                    if(palya[3][7] != 0) {
+                                        button_35.setText("");
+                                        button_35.setText(String.valueOf(palya[3][7]));
+                                    }
+                                    if(palya[3][8] != 0) {
+                                        button_36.setText("");
+                                        button_36.setText(String.valueOf(palya[3][8]));
+                                    }
+
+                                    //Ötödik sor
+                                    if(palya[4][0] != 0) {
+                                        button_37.setText("");
+                                        button_37.setText(String.valueOf(palya[4][0]));
+                                    }
+                                    if(palya[4][1] != 0) {
+                                        button_38.setText("");
+                                        button_38.setText(String.valueOf(palya[4][1]));
+                                    }
+                                    if(palya[4][2] != 0) {
+                                        button_39.setText("");
+                                        button_39.setText(String.valueOf(palya[4][2]));
+                                    }
+                                    if(palya[4][3] != 0) {
+                                        button_40.setText("");
+                                        button_40.setText(String.valueOf(palya[4][3]));
+                                    }
+                                    if(palya[4][4] != 0) {
+                                        button_41.setText("");
+                                        button_41.setText(String.valueOf(palya[4][4]));
+                                    }
+                                    if(palya[4][5] != 0) {
+                                        button_42.setText("");
+                                        button_42.setText(String.valueOf(palya[4][5]));
+                                    }
+                                    if(palya[4][6] != 0) {
+                                        button_43.setText("");
+                                        button_43.setText(String.valueOf(palya[4][6]));
+                                    }
+                                    if(palya[4][7] != 0) {
+                                        button_44.setText("");
+                                        button_44.setText(String.valueOf(palya[4][7]));
+                                    }
+                                    if(palya[4][8] != 0) {
+                                        button_45.setText("");
+                                        button_45.setText(String.valueOf(palya[4][8]));
+                                    }
+
+                                    //Hatodik sor
+                                    if(palya[5][0] != 0) {
+                                        button_46.setText("");
+                                        button_46.setText(String.valueOf(palya[5][0]));
+                                    }
+                                    if(palya[5][1] != 0) {
+                                        button_47.setText("");
+                                        button_47.setText(String.valueOf(palya[5][1]));
+                                    }
+                                    if(palya[5][2] != 0) {
+                                        button_48.setText("");
+                                        button_48.setText(String.valueOf(palya[5][2]));
+                                    }
+                                    if(palya[5][3] != 0) {
+                                        button_49.setText("");
+                                        button_49.setText(String.valueOf(palya[5][3]));
+                                    }
+                                    if(palya[5][4] != 0) {
+                                        button_50.setText("");
+                                        button_50.setText(String.valueOf(palya[5][4]));
+                                    }
+                                    if(palya[5][5] != 0) {
+                                        button_51.setText("");
+                                        button_51.setText(String.valueOf(palya[5][5]));
+                                    }
+                                    if(palya[5][6] != 0) {
+                                        button_52.setText("");
+                                        button_52.setText(String.valueOf(palya[5][6]));
+                                    }
+                                    if(palya[5][7] != 0) {
+                                        button_53.setText("");
+                                        button_53.setText(String.valueOf(palya[5][7]));
+                                    }
+                                    if(palya[5][8] != 0) {
+                                        button_54.setText("");
+                                        button_54.setText(String.valueOf(palya[5][8]));
+                                    }
+
+                                    //Hetedik sor
+                                    if(palya[6][0] != 0) {
+                                        button_55.setText("");
+                                        button_55.setText(String.valueOf(palya[6][0]));
+                                    }
+                                    if(palya[6][1] != 0) {
+                                        button_56.setText("");
+                                        button_56.setText(String.valueOf(palya[6][1]));
+                                    }
+                                    if(palya[6][2] != 0) {
+                                        button_57.setText("");
+                                        button_57.setText(String.valueOf(palya[6][2]));
+                                    }
+                                    if(palya[6][3] != 0) {
+                                        button_58.setText("");
+                                        button_58.setText(String.valueOf(palya[6][3]));
+                                    }
+                                    if(palya[6][4] != 0) {
+                                        button_59.setText("");
+                                        button_59.setText(String.valueOf(palya[6][4]));
+                                    }
+                                    if(palya[6][5] != 0) {
+                                        button_60.setText("");
+                                        button_60.setText(String.valueOf(palya[6][5]));
+                                    }
+                                    if(palya[6][6] != 0) {
+                                        button_61.setText("");
+                                        button_61.setText(String.valueOf(palya[6][6]));
+                                    }
+                                    if(palya[6][7] != 0) {
+                                        button_62.setText("");
+                                        button_62.setText(String.valueOf(palya[6][7]));
+                                    }
+                                    if(palya[6][8] != 0) {
+                                        button_63.setText("");
+                                        button_63.setText(String.valueOf(palya[6][8]));
+                                    }
+
+                                    //Nyolcadik sor
+                                    if(palya[7][0] != 0) {
+                                        button_64.setText("");
+                                        button_64.setText(String.valueOf(palya[2][0]));
+                                    }
+                                    if(palya[7][1] != 0) {
+                                        button_65.setText("");
+                                        button_65.setText(String.valueOf(palya[7][1]));
+                                    }
+                                    if(palya[7][2] != 0) {
+                                        button_66.setText("");
+                                        button_66.setText(String.valueOf(palya[7][2]));
+                                    }
+                                    if(palya[7][3] != 0) {
+                                        button_67.setText("");
+                                        button_67.setText(String.valueOf(palya[7][3]));
+                                    }
+                                    if(palya[7][4] != 0) {
+                                        button_68.setText("");
+                                        button_68.setText(String.valueOf(palya[7][4]));
+                                    }
+                                    if(palya[7][5] != 0) {
+                                        button_69.setText("");
+                                        button_69.setText(String.valueOf(palya[7][5]));
+                                    }
+                                    if(palya[7][6] != 0) {
+                                        button_70.setText("");
+                                        button_70.setText(String.valueOf(palya[7][6]));
+                                    }
+                                    if(palya[7][7] != 0) {
+                                        button_71.setText("");
+                                        button_71.setText(String.valueOf(palya[7][7]));
+                                    }
+                                    if(palya[7][8] != 0) {
+                                        button_72.setText("");
+                                        button_72.setText(String.valueOf(palya[7][8]));
+                                    }
+
+                                    //Kilencedik sor
+                                    if(palya[2][0] != 0) {
+                                        button_73.setText("");
+                                        button_73.setText(String.valueOf(palya[8][0]));
+                                    }
+                                    if(palya[8][1] != 0) {
+                                        button_74.setText("");
+                                        button_74.setText(String.valueOf(palya[8][1]));
+                                    }
+                                    if(palya[8][2] != 0) {
+                                        button_75.setText("");
+                                        button_75.setText(String.valueOf(palya[8][2]));
+                                    }
+                                    if(palya[8][3] != 0) {
+                                        button_76.setText("");
+                                        button_76.setText(String.valueOf(palya[8][3]));
+                                    }
+                                    if(palya[8][4] != 0) {
+                                        button_77.setText("");
+                                        button_77.setText(String.valueOf(palya[8][4]));
+                                    }
+                                    if(palya[8][5] != 0) {
+                                        button_78.setText("");
+                                        button_78.setText(String.valueOf(palya[8][5]));
+                                    }
+                                    if(palya[8][6] != 0) {
+                                        button_79.setText("");
+                                        button_79.setText(String.valueOf(palya[8][6]));
+                                    }
+                                    if(palya[8][7] != 0) {
+                                        button_80.setText("");
+                                        button_80.setText(String.valueOf(palya[8][7]));
+                                    }
+                                    if(palya[8][8] != 0) {
+                                        button_81.setText("");
+                                        button_81.setText(String.valueOf(palya[8][8]));
+                                    }
+                                }
+                            })
+                            .setNegativeButton("Nem", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            })
+                            .show();
+
+                if(firstGame) {
+                    TaskGenerator tg = new TaskGenerator(9, 20);
+                    tg.init();
+                    tg.fillValues();
+                    palya = tg.getLevel();
+
+
+                    button_1.setText("");
+                    button_2.setText("");
+                    button_3.setText("");
+                    button_4.setText("");
+                    button_5.setText("");
+                    button_6.setText("");
+                    button_7.setText("");
+                    button_8.setText("");
+                    button_9.setText("");
+                    button_10.setText("");
+                    button_11.setText("");
+                    button_12.setText("");
+                    button_13.setText("");
+                    button_14.setText("");
+                    button_15.setText("");
+                    button_16.setText("");
+                    button_17.setText("");
+                    button_18.setText("");
+                    button_19.setText("");
+                    button_20.setText("");
+                    button_21.setText("");
+                    button_22.setText("");
+                    button_23.setText("");
+                    button_24.setText("");
+                    button_25.setText("");
+                    button_26.setText("");
+                    button_27.setText("");
+                    button_28.setText("");
+                    button_29.setText("");
+                    button_30.setText("");
+                    button_31.setText("");
+                    button_32.setText("");
+                    button_33.setText("");
+                    button_34.setText("");
+                    button_35.setText("");
+                    button_36.setText("");
+                    button_37.setText("");
+                    button_38.setText("");
+                    button_39.setText("");
+                    button_40.setText("");
+                    button_41.setText("");
+                    button_42.setText("");
+                    button_43.setText("");
+                    button_44.setText("");
+                    button_45.setText("");
+                    button_46.setText("");
+                    button_47.setText("");
+                    button_48.setText("");
+                    button_49.setText("");
+                    button_50.setText("");
+                    button_51.setText("");
+                    button_52.setText("");
+                    button_53.setText("");
+                    button_54.setText("");
+                    button_55.setText("");
+                    button_56.setText("");
+                    button_57.setText("");
+                    button_58.setText("");
+                    button_59.setText("");
+                    button_60.setText("");
+                    button_61.setText("");
+                    button_62.setText("");
+                    button_63.setText("");
+                    button_64.setText("");
+                    button_65.setText("");
+                    button_66.setText("");
+                    button_67.setText("");
+                    button_68.setText("");
+                    button_69.setText("");
+                    button_70.setText("");
+                    button_71.setText("");
+                    button_72.setText("");
+                    button_73.setText("");
+                    button_74.setText("");
+                    button_75.setText("");
+                    button_76.setText("");
+                    button_77.setText("");
+                    button_78.setText("");
+                    button_79.setText("");
+                    button_80.setText("");
+                    button_81.setText("");
+
+
+                    //Elso sor
+                    if(palya[0][0] != 0) {
+                        button_1.setText("");
+                        button_1.setText(String.valueOf(palya[0][0]));
+                    }
+
+                    if(palya[0][1] != 0) {
+                        button_2.setText("");
+                        button_2.setText(String.valueOf(palya[0][1]));
+                    }
+
+                    if(palya[0][2] != 0) {
+                        button_3.setText("");
+                        button_3.setText(String.valueOf(palya[0][2]));
+                    }
+
+                    if(palya[0][3] != 0) {
+                        button_4.setText("");
+                        button_4.setText(String.valueOf(palya[0][3]));
+                    }
+
+                    if(palya[0][4] != 0) {
+                        button_5.setText("");
+                        button_5.setText(String.valueOf(palya[0][4]));
+                    }
+
+                    if(palya[0][5] != 0) {
+                        button_6.setText("");
+                        button_6.setText(String.valueOf(palya[0][5]));
+                    }
+
+                    if(palya[0][6] != 0) {
+                        button_7.setText("");
+                        button_7.setText(String.valueOf(palya[0][6]));
+                    }
+
+                    if(palya[0][7] != 0) {
+                        button_8.setText("");
+                        button_8.setText(String.valueOf(palya[0][7]));
+                    }
+
+                    if(palya[0][8] != 0) {
+                        button_9.setText("");
+                        button_9.setText(String.valueOf(palya[0][8]));
+                    }
+
+                    //Masodik sor
+                    if(palya[1][0] != 0) {
+                        button_10.setText("");
+                        button_10.setText(String.valueOf(palya[1][0]));
+                    }
+                    if(palya[1][1] != 0) {
+                        button_11.setText("");
+                        button_11.setText(String.valueOf(palya[1][1]));
+                    }
+                    if(palya[1][2] != 0) {
+                        button_12.setText("");
+                        button_12.setText(String.valueOf(palya[1][2]));
+                    }
+                    if(palya[1][3] != 0) {
+                        button_13.setText("");
+                        button_13.setText(String.valueOf(palya[1][3]));
+                    }
+                    if(palya[1][4] != 0) {
+                        button_14.setText("");
+                        button_14.setText(String.valueOf(palya[1][4]));
+                    }
+                    if(palya[1][5] != 0) {
+                        button_15.setText("");
+                        button_15.setText(String.valueOf(palya[1][5]));
+                    }
+                    if(palya[1][6] != 0) {
+                        button_16.setText("");
+                        button_16.setText(String.valueOf(palya[1][6]));
+                    }
+                    if(palya[1][7] != 0) {
+                        button_17.setText("");
+                        button_17.setText(String.valueOf(palya[1][7]));
+                    }
+                    if(palya[1][8] != 0) {
+                        button_18.setText("");
+                        button_18.setText(String.valueOf(palya[1][8]));
+                    }
+
+                    //Harmadik sor
+                    if(palya[2][0] != 0) {
+                        button_19.setText("");
+                        button_19.setText(String.valueOf(palya[2][0]));
+                    }
+                    if(palya[2][1] != 0) {
+                        button_20.setText("");
+                        button_20.setText(String.valueOf(palya[2][1]));
+                    }
+                    if(palya[2][2] != 0) {
+                        button_21.setText("");
+                        button_21.setText(String.valueOf(palya[2][2]));
+                    }
+                    if(palya[2][3] != 0) {
+                        button_22.setText("");
+                        button_22.setText(String.valueOf(palya[2][3]));
+                    }
+                    if(palya[2][4] != 0) {
+                        button_23.setText("");
+                        button_23.setText(String.valueOf(palya[2][4]));
+                    }
+                    if(palya[2][5] != 0) {
+                        button_24.setText("");
+                        button_24.setText(String.valueOf(palya[2][5]));
+                    }
+                    if(palya[2][6] != 0) {
+                        button_25.setText("");
+                        button_25.setText(String.valueOf(palya[2][6]));
+                    }
+                    if(palya[2][7] != 0) {
+                        button_26.setText("");
+                        button_26.setText(String.valueOf(palya[2][7]));
+                    }
+                    if(palya[2][8] != 0) {
+                        button_27.setText("");
+                        button_27.setText(String.valueOf(palya[2][8]));
+                    }
+
+                    //Negyedik sor
+                    if(palya[3][0] != 0) {
+                        button_28.setText("");
+                        button_28.setText(String.valueOf(palya[3][0]));
+                    }
+                    if(palya[3][1] != 0) {
+                        button_29.setText("");
+                        button_29.setText(String.valueOf(palya[3][1]));
+                    }
+                    if(palya[3][2] != 0) {
+                        button_30.setText("");
+                        button_30.setText(String.valueOf(palya[3][2]));
+                    }
+                    if(palya[3][3] != 0) {
+                        button_31.setText("");
+                        button_31.setText(String.valueOf(palya[3][3]));
+                    }
+                    if(palya[3][4] != 0) {
+                        button_32.setText("");
+                        button_32.setText(String.valueOf(palya[3][4]));
+                    }
+                    if(palya[3][5] != 0) {
+                        button_33.setText("");
+                        button_33.setText(String.valueOf(palya[3][5]));
+                    }
+                    if(palya[3][6] != 0) {
+                        button_34.setText("");
+                        button_34.setText(String.valueOf(palya[3][6]));
+                    }
+                    if(palya[3][7] != 0) {
+                        button_35.setText("");
+                        button_35.setText(String.valueOf(palya[3][7]));
+                    }
+                    if(palya[3][8] != 0) {
+                        button_36.setText("");
+                        button_36.setText(String.valueOf(palya[3][8]));
+                    }
+
+                    //Ötödik sor
+                    if(palya[4][0] != 0) {
+                        button_37.setText("");
+                        button_37.setText(String.valueOf(palya[4][0]));
+                    }
+                    if(palya[4][1] != 0) {
+                        button_38.setText("");
+                        button_38.setText(String.valueOf(palya[4][1]));
+                    }
+                    if(palya[4][2] != 0) {
+                        button_39.setText("");
+                        button_39.setText(String.valueOf(palya[4][2]));
+                    }
+                    if(palya[4][3] != 0) {
+                        button_40.setText("");
+                        button_40.setText(String.valueOf(palya[4][3]));
+                    }
+                    if(palya[4][4] != 0) {
+                        button_41.setText("");
+                        button_41.setText(String.valueOf(palya[4][4]));
+                    }
+                    if(palya[4][5] != 0) {
+                        button_42.setText("");
+                        button_42.setText(String.valueOf(palya[4][5]));
+                    }
+                    if(palya[4][6] != 0) {
+                        button_43.setText("");
+                        button_43.setText(String.valueOf(palya[4][6]));
+                    }
+                    if(palya[4][7] != 0) {
+                        button_44.setText("");
+                        button_44.setText(String.valueOf(palya[4][7]));
+                    }
+                    if(palya[4][8] != 0) {
+                        button_45.setText("");
+                        button_45.setText(String.valueOf(palya[4][8]));
+                    }
+
+                    //Hatodik sor
+                    if(palya[5][0] != 0) {
+                        button_46.setText("");
+                        button_46.setText(String.valueOf(palya[5][0]));
+                    }
+                    if(palya[5][1] != 0) {
+                        button_47.setText("");
+                        button_47.setText(String.valueOf(palya[5][1]));
+                    }
+                    if(palya[5][2] != 0) {
+                        button_48.setText("");
+                        button_48.setText(String.valueOf(palya[5][2]));
+                    }
+                    if(palya[5][3] != 0) {
+                        button_49.setText("");
+                        button_49.setText(String.valueOf(palya[5][3]));
+                    }
+                    if(palya[5][4] != 0) {
+                        button_50.setText("");
+                        button_50.setText(String.valueOf(palya[5][4]));
+                    }
+                    if(palya[5][5] != 0) {
+                        button_51.setText("");
+                        button_51.setText(String.valueOf(palya[5][5]));
+                    }
+                    if(palya[5][6] != 0) {
+                        button_52.setText("");
+                        button_52.setText(String.valueOf(palya[5][6]));
+                    }
+                    if(palya[5][7] != 0) {
+                        button_53.setText("");
+                        button_53.setText(String.valueOf(palya[5][7]));
+                    }
+                    if(palya[5][8] != 0) {
+                        button_54.setText("");
+                        button_54.setText(String.valueOf(palya[5][8]));
+                    }
+
+                    //Hetedik sor
+                    if(palya[6][0] != 0) {
+                        button_55.setText("");
+                        button_55.setText(String.valueOf(palya[6][0]));
+                    }
+                    if(palya[6][1] != 0) {
+                        button_56.setText("");
+                        button_56.setText(String.valueOf(palya[6][1]));
+                    }
+                    if(palya[6][2] != 0) {
+                        button_57.setText("");
+                        button_57.setText(String.valueOf(palya[6][2]));
+                    }
+                    if(palya[6][3] != 0) {
+                        button_58.setText("");
+                        button_58.setText(String.valueOf(palya[6][3]));
+                    }
+                    if(palya[6][4] != 0) {
+                        button_59.setText("");
+                        button_59.setText(String.valueOf(palya[6][4]));
+                    }
+                    if(palya[6][5] != 0) {
+                        button_60.setText("");
+                        button_60.setText(String.valueOf(palya[6][5]));
+                    }
+                    if(palya[6][6] != 0) {
+                        button_61.setText("");
+                        button_61.setText(String.valueOf(palya[6][6]));
+                    }
+                    if(palya[6][7] != 0) {
+                        button_62.setText("");
+                        button_62.setText(String.valueOf(palya[6][7]));
+                    }
+                    if(palya[6][8] != 0) {
+                        button_63.setText("");
+                        button_63.setText(String.valueOf(palya[6][8]));
+                    }
+
+                    //Nyolcadik sor
+                    if(palya[7][0] != 0) {
+                        button_64.setText("");
+                        button_64.setText(String.valueOf(palya[2][0]));
+                    }
+                    if(palya[7][1] != 0) {
+                        button_65.setText("");
+                        button_65.setText(String.valueOf(palya[7][1]));
+                    }
+                    if(palya[7][2] != 0) {
+                        button_66.setText("");
+                        button_66.setText(String.valueOf(palya[7][2]));
+                    }
+                    if(palya[7][3] != 0) {
+                        button_67.setText("");
+                        button_67.setText(String.valueOf(palya[7][3]));
+                    }
+                    if(palya[7][4] != 0) {
+                        button_68.setText("");
+                        button_68.setText(String.valueOf(palya[7][4]));
+                    }
+                    if(palya[7][5] != 0) {
+                        button_69.setText("");
+                        button_69.setText(String.valueOf(palya[7][5]));
+                    }
+                    if(palya[7][6] != 0) {
+                        button_70.setText("");
+                        button_70.setText(String.valueOf(palya[7][6]));
+                    }
+                    if(palya[7][7] != 0) {
+                        button_71.setText("");
+                        button_71.setText(String.valueOf(palya[7][7]));
+                    }
+                    if(palya[7][8] != 0) {
+                        button_72.setText("");
+                        button_72.setText(String.valueOf(palya[7][8]));
+                    }
+
+                    //Kilencedik sor
+                    if(palya[2][0] != 0) {
+                        button_73.setText("");
+                        button_73.setText(String.valueOf(palya[8][0]));
+                    }
+                    if(palya[8][1] != 0) {
+                        button_74.setText("");
+                        button_74.setText(String.valueOf(palya[8][1]));
+                    }
+                    if(palya[8][2] != 0) {
+                        button_75.setText("");
+                        button_75.setText(String.valueOf(palya[8][2]));
+                    }
+                    if(palya[8][3] != 0) {
+                        button_76.setText("");
+                        button_76.setText(String.valueOf(palya[8][3]));
+                    }
+                    if(palya[8][4] != 0) {
+                        button_77.setText("");
+                        button_77.setText(String.valueOf(palya[8][4]));
+                    }
+                    if(palya[8][5] != 0) {
+                        button_78.setText("");
+                        button_78.setText(String.valueOf(palya[8][5]));
+                    }
+                    if(palya[8][6] != 0) {
+                        button_79.setText("");
+                        button_79.setText(String.valueOf(palya[8][6]));
+                    }
+                    if(palya[8][7] != 0) {
+                        button_80.setText("");
+                        button_80.setText(String.valueOf(palya[8][7]));
+                    }
+                    if(palya[8][8] != 0) {
+                        button_81.setText("");
+                        button_81.setText(String.valueOf(palya[8][8]));
+                    }
+                }
+
+
+                firstGame = false;
             }
         });
     }

@@ -16,9 +16,11 @@ public class TaskGenerator {
         Double SRNd = Math.sqrt(N);
         SRN = SRNd.intValue();
 
-        mat = new int[N][N];
+    }
 
-        fillValues();
+    public void init() {
+
+        mat = new int[N][N];
     }
 
     // Sudoku Generator
@@ -32,6 +34,12 @@ public class TaskGenerator {
 
         // Remove Randomly K digits to make game
         removeKDigits();
+    }
+
+    public void fillAllZero() {
+        for(int i = 0; i < 9; ++i)
+            for(int j = 0; j < 9; ++j)
+                mat[i][j] = 0;
     }
 
     void fillDiagonal()
@@ -176,18 +184,6 @@ public class TaskGenerator {
                 mat[i][j] = 0;
             }
         }
-    }
-
-    // Print sudoku
-    public void printSudoku()
-    {
-        for (int i = 0; i<N; i++)
-        {
-            for (int j = 0; j<N; j++)
-                System.out.print(mat[i][j] + " ");
-            System.out.println();
-        }
-        System.out.println();
     }
 
     public int[][] getLevel() {
