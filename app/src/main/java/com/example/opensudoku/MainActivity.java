@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     int id, number_to_set;
     public static final int RESULT_REQUEST = 1;
     int[][] palya;
+    int[][] solution;
     boolean firstGame = true;
 
     private static final String TAG = "MainActivity";
@@ -960,6 +961,7 @@ public class MainActivity extends AppCompatActivity {
                                     tg.fillValues();
                                     palya = tg.getLevel();
 
+                                    solution = tg.getRemovedNumbers();
 
                                     button_1.setText("");
                                     button_2.setText("");
@@ -1409,6 +1411,7 @@ public class MainActivity extends AppCompatActivity {
                     tg.fillValues();
                     palya = tg.getLevel();
 
+                    solution = tg.getRemovedNumbers();
 
                     button_1.setText("");
                     button_2.setText("");
@@ -1849,7 +1852,30 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         button_check = findViewById(R.id.buttonCheck);
+        button_check.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkPlayersSolution();
+            }
+        });
         button_solution = findViewById(R.id.buttonSolution);
+        button_solution.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showSolution();
+            }
+        });
+    }
+
+    private void checkPlayersSolution() {
+        //ToDO
+    }
+
+    private void showSolution() {
+        //ToDo
+        for(int i = 0; i < solution.length; ++i)
+            for(int j = 0; j < solution.length; ++j)
+                Log.d(TAG, "Solution: " + String.valueOf(solution[i][i]));
     }
 
     @Override

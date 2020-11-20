@@ -6,6 +6,7 @@ public class TaskGenerator {
     int N; // number of columns/rows.
     int SRN; // square root of N
     int K; // No. Of missing digits
+    int[] removedNumbers[];
 
     public TaskGenerator(int N, int K) {
 
@@ -21,6 +22,8 @@ public class TaskGenerator {
     public void init() {
 
         mat = new int[N][N];
+        removedNumbers = new int[N][N];
+        fillAllZero(removedNumbers);
     }
 
     // Sudoku Generator
@@ -36,10 +39,10 @@ public class TaskGenerator {
         removeKDigits();
     }
 
-    public void fillAllZero() {
+    public void fillAllZero(int[][] m) {
         for(int i = 0; i < 9; ++i)
             for(int j = 0; j < 9; ++j)
-                mat[i][j] = 0;
+                m[i][j] = 0;
     }
 
     void fillDiagonal()
@@ -181,6 +184,7 @@ public class TaskGenerator {
             if (mat[i][j] != 0)
             {
                 count--;
+                removedNumbers[i][j] = mat[i][j];
                 mat[i][j] = 0;
             }
         }
@@ -188,5 +192,9 @@ public class TaskGenerator {
 
     public int[][] getLevel() {
         return mat;
+    }
+
+    public int[][] getRemovedNumbers() {
+        return removedNumbers;
     }
 }
