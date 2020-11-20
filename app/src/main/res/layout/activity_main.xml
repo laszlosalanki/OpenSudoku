@@ -650,8 +650,31 @@
         android:text="@string/new_game"
         android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="40dp"
         style="@style/new_game_style"/>
+
+    <Button
+        android:id="@+id/buttonCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check"
+        android:textAllCaps="false"
+        style="@style/new_game_style"
+        app:layout_constraintLeft_toRightOf="@id/buttonNewGame"
+        app:layout_constraintRight_toLeftOf="@id/buttonSolution"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="40dp"/>
+
+    <Button
+        android:id="@+id/buttonSolution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/solution"
+        android:textAllCaps="false"
+        style="@style/new_game_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="40dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

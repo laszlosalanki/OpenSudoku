@@ -3,4 +3,6 @@
     <string name="new_game">Új játék</string>
     <string name="cancel">Mégse</string>
     <string name="ok">Oké</string>
+    <string name="check">Megoldás ellenőrzése</string>
+    <string name="solution">Megoldás</string>
 </resources>
