@@ -181,11 +181,13 @@ public class TaskGenerator {
                 j = j - 1;
 
             // System.out.println(i+" "+j);
-            if (mat[i][j] != 0)
-            {
-                count--;
-                removedNumbers[i][j] = mat[i][j];
-                mat[i][j] = 0;
+            if(j < 9 && i < 9) {
+                if (mat[i][j] != 0)
+                {
+                    count--;
+                    removedNumbers[i][j] = mat[i][j];
+                    mat[i][j] = 0;
+                }
             }
         }
     }
